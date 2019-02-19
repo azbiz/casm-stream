@@ -14,6 +14,10 @@
         <!-- CSS -->
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/timelineMarkers.css">
+
+        <!-- JS -->
+        <link rel="JavaScript" href="js/timelineMarkers.js"
 
         <!--Media Player-->
         <link href="//amp.azure.net/libs/amp/2.1.2/skins/amp-default/azuremediaplayer.min.css" rel="stylesheet">
@@ -80,6 +84,11 @@
                 width: "640",
                 height: "480",
                 poster: "media/casmsermon_live1920x1440.png"  // Which image should we display before the video plays?
+                plugins: {
+                    timelineMarker: {
+                        markertime: { "0.00","1:30","2:00"}
+                    }
+                }
                 
 
 
