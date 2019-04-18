@@ -13,7 +13,42 @@
 <body>
 
     <div id="root" class="azure-subclipper" />
-    
+    <!-- Customize your video playe here -->
+    <script>
+            var myOptions = {
+                "nativeControlsForTouch": false,
+                "logo": { "enabled":false },
+                autoplay: true,
+                controls: true,
+                width: "640",
+                height: "480",
+                poster: "media/casmsermon_live1920x1440.png",  // Which image should we display before the video plays?
+                plugins: {
+                    timelineMarker: {
+                        markertime: ["00:00","00:00:00","00:00:00","00:00:00"]
+                    }
+                }
+                
+
+
+            };
+
+            // Find the player on the page and set the options above.
+            // Needs the ID of the div with the media player, as well as an object for all of the options
+            var myPlayer = amp("azuremediaplayer", myOptions);
+
+            // Which video should the player use?
+            myPlayer.src([
+                {
+                    src: "https://casmstreaming-uswe.streaming.media.azure.net/ac1e6b33-9edb-4ec6-9017-cb2f8f313645/cd17cc8a-47c0-4588-94ab-67e227339ddb.ism/manifest", type: "application/vnd.ms-sstr+xml"
+                }
+            ]);
+
+            // Fallback options for video playing
+            amp.options.flashSS.swf       = "//amp.azure.net/libs/amp/1.0.0/techs/StrobeMediaPlayback.2.0.swf";
+            amp.options.flashSS.plugin    = "//amp.azure.net/libs/amp/1.0.0/techs/MSAdaptiveStreamingPlugin-osmf2.0.swf";
+            amp.options.silverlightSS.xap = "//amp.azure.net/libs/amp/1.0.0/techs/SmoothStreamingPlayer.xap";
+        </script>
  <script>
  
  var subclipper = new subclipper({
