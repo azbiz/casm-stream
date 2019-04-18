@@ -116,48 +116,7 @@
             amp.options.flashSS.plugin    = "//amp.azure.net/libs/amp/1.0.0/techs/MSAdaptiveStreamingPlugin-osmf2.0.swf";
             amp.options.silverlightSS.xap = "//amp.azure.net/libs/amp/1.0.0/techs/SmoothStreamingPlayer.xap";
         </script>
-        <script>
-        var subclipper = new subclipper({
-    selector: '#root',
-    logLevel: 'info',
-    restVersion: '2.0',
-    minimumMarkerGap: 6,
-    submitSubclipCallback: onSubmitSubclip,
-    singleBitrateMp4Profile: {
-            Codecs: [{
-                    // Video Codec with single H264Layers
-                }, {
-                    // Audio Codec
-                }]
-    },
-    multiBitrateMp4Profile: {
-            Codecs: [{
-                    // Video Codec with multiple H264Layers
-                }, {
-                    // Audio Codec
-                }]
-    },
-    keymap: {
-      // See below for more info
-    },
-   // Enable the Video Assets panel in the widget to automatically load assets (input contract)
-    assetsPanelLoaderCallback: onLoadAssets,
-    height: 600,
-    subclippingMode: 'all',
-    filterAssetsTypes: true,
-    speedLevels: [
-        { name: '4x', value: 4.0 },
-        { name: '3x', value: 3.0 },
-        { name: '2x', value: 2.0 },
-        { name: 'normal', value: 1.0 },
-        { name: '0.75x', value: 0.75 },
-        { name: '0.5x', value: 0.5 },
-    ],
-    resetOnJobDone: false,
-    autoplayVideo: true,
-    language: 'en'    
-});
-        </script>
+        
 
     </body>
 </html>
